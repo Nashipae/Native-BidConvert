@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="redevstudio.com.bidconverter.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <TextView
+        android:id="@+id/amountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:text="@string/enter_the_amount"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="56dp"
+        android:layout_below="@+id/amountLabel"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/baseLabel"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Base currency:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="113dp"
+        android:layout_below="@+id/amountInput"
+        android:layout_alignLeft="@+id/amountLabel"
+        android:layout_alignStart="@+id/amountLabel"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_alignRight="@+id/tvDate"
+        android:layout_alignEnd="@+id/tvDate" />
+
+    <Spinner
+        android:id="@+id/baseSpinner"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="143dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:layout_below="@+id/baseLabel"
+        android:layout_alignLeft="@+id/amountInput"
+        android:layout_alignStart="@+id/amountInput" />
+
+    <TextView
+        android:id="@+id/targetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Target currency:"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="182dp"
+        android:layout_below="@+id/baseSpinner"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/targetSpinner"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="213dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:layout_below="@+id/targetLabel"
+        android:layout_alignLeft="@+id/targetLabel"
+        android:layout_alignStart="@+id/targetLabel"
+        android:layout_alignRight="@+id/targetLabel"
+        android:layout_alignEnd="@+id/targetLabel" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteY="251dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/targetSpinner"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Convert"
+        tools:layout_editor_absoluteY="300dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_below="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/convertTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="25sp"
+        android:textColor="#0000FF"/>
+
+</RelativeLayout >
